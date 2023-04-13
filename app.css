@@ -1,0 +1,119 @@
+:root {
+    --gray: rgba(186, 193, 184, 1);
+    --blue: rgba(88, 164, 176, 1);
+    --dark-blue: rgb(11, 49, 54);
+    --green: rgba(12, 124, 89, 1);
+    --dark-grey: rgba(43, 48, 58, 1);
+    --light-grey: rgba(43, 48, 58, 0.5);
+    --red: rgba(214, 73, 51, 1);
+}
+
+body {
+    background-color: black;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    color: var(--dark-grey);
+}
+h1 {
+    color: white;
+}
+
+/* CONTAINER */
+
+.container {
+    background-color: white;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 64px 64px 64px;
+    position: relative;
+}
+
+/* TABS */
+
+.tabs {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--light-grey);
+    margin: 0 0 32px 0;
+    padding: 16px;
+}
+
+.tabs p {
+    padding: 8px;
+}
+
+.tabs p:hover {
+    color: var(--dark-grey);
+    cursor: pointer;
+}
+
+.tabs p.active {
+    color: var(--dark-grey);
+    position: relative;
+}
+.line {
+    height: 2px;
+    width: 100%;
+    background-color: var(--gray);
+    position: absolute;
+    top: 90px;
+}
+
+.tabs .active::before {
+    content: "";
+    width: 200%;
+    height: 4px;
+    background-color: var(--red);
+    position: absolute;
+    bottom: -26px;
+    left: -50%;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+/* Toggle Section */
+
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-wrapper img {
+    height: 40px;
+    margin: 0 16px;
+}
+
+.toggle {
+    background-color: black;
+    border-radius: 20px;
+    margin: 0 20px;
+    height: 32px;
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4px 0 16px;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.toggle span:last-of-type {
+    padding: 4px 16px;
+    background-color: var(--red);
+    border-radius: 20px;
+}
