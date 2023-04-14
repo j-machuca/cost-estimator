@@ -1,2 +1,7 @@
 # cost-estimator
-Cost Estimator 
+
+Cost Estimator
+
+-   [x] Desktop Version
+-   [ ] Tablet Version
+-   [ ] Mobile Version
