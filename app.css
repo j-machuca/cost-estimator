@@ -35,6 +35,7 @@ h1 {
     align-items: center;
     padding: 0 64px 64px 64px;
     position: relative;
+    box-sizing: border-box;
 }
 
 /* TABS */
@@ -88,6 +89,7 @@ h1 {
 .toggle-wrapper {
     display: flex;
     align-items: center;
+    margin-bottom: 1.5rem;
 }
 
 .toggle-wrapper img {
@@ -116,4 +118,179 @@ h1 {
     padding: 4px 16px;
     background-color: var(--red);
     border-radius: 20px;
+}
+
+/* Sessions Card */
+
+.sessions-card {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 0.8rem;
+    text-align: center;
+    width: 50%;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.sessions-card p:first-of-type {
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.sessions-card p.number {
+    color: var(--green);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.description {
+    line-height: 2rem;
+    font-style: italic;
+}
+.description span {
+    color: var(--red);
+    font-weight: bold;
+}
+
+/* Slider */
+
+.slider {
+    width: 100%;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.slider .bar {
+    width: 100%;
+    height: 1rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+}
+
+.slider .progress {
+    width: 34%;
+    height: 1rem;
+    background: linear-gradient(
+        90deg,
+        var(--light-grey) 0%,
+        var(--dark-grey) 50%,
+        var(--green) 100%
+    );
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slider .point {
+    height: 1.4rem;
+    width: 1.4rem;
+    background-color: var(--green);
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.3rem;
+    left: 32%;
+    transition: transform 0.2s ease;
+}
+
+.point:hover,
+.point:focus {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.scale {
+    width: 100%;
+}
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--light-grey);
+}
+
+/* Card Section */
+.card-wrapper {
+    display: flex;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-0.5rem);
+}
+
+.card .top-section {
+    padding: 0.5rem;
+    text-transform: uppercase;
+}
+
+.card .save-header p {
+    background: linear-gradient(90deg, var(--dark-grey) 0%, var(--green) 100%);
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+    padding: 0.5rem 0;
+    border-radius: 1rem 1rem 0 0;
+    text-transform: uppercase;
+}
+
+.card .top-section p {
+    margin: 0.6rem 0;
+}
+
+.card p.price {
+    color: var(--green);
+    font-size: 2.5rem;
+}
+
+.card hr {
+    width: 40%;
+    color: var(--red);
+    opacity: 0.3;
+    border-radius: 0.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.card .bottom-section {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+
+.card button {
+    border: none;
+    color: white;
+    background-color: var(--green);
+
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    transition: 0.15s transform ease;
+    letter-spacing: 0.05rem;
+    margin-bottom: 1rem;
+}
+
+.card button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
